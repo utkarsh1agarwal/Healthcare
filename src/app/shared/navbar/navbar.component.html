@@ -1,8 +1,9 @@
 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
   <div class="container">
-    <a class="navbar-brand mr-lg-5" [routerLink]="['/login']">
+    <a class="navbar-brand mr-lg-5" style="size: 1.5rem;" [routerLink]="['/login']">
       <!-- <img src="./assets/img/brand/argon-white.png"> -->
-      <span>Team 404</span>
+      <b><span style="font-size: 1.5rem;"> Team 404</span></b>
+      
     </a>
     <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
           [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
@@ -27,7 +28,7 @@
       </div>
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
         
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link no-caret" data-toggle="dropdown" role="button"
           >
             <i class="ni ni-collection d-lg-none"></i>
@@ -39,9 +40,51 @@
             <a *ngIf="getPath() =='/register' || getPath() =='/home'" [routerLink]="['/login']" class="dropdown-item">Login</a>
             <a *ngIf="getPath() =='/login' || getPath() =='/home'" [routerLink]="['/register']" class="dropdown-item">Register</a>
           </div>
+        </li> -->
+        <li class="nav-item dropdown" *ngIf="getPath() =='/login'">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/home']">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Home</span>
+          </a>
         </li>
-        <li class="nav-item dropdown" *ngIf="getPath() =='/profile' || getPath() =='/landing'">
-          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;">
+        <li class="nav-item dropdown" *ngIf="getPath() =='/login'">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/register']">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Register</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="getPath() =='/register'">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/login']">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Login</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="getPath() =='/register'">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/home']">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Home</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="getPath() =='/user-profile'">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/landing']">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Landing</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="getPath() =='/user-profile'">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/home']">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Logout</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="getPath() =='/landing'">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/user-profile']">
+            <i class="ni ni-ui-04 d-lg-none"></i>
+            <span class="nav-link-inner--text">Profile</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="getPath() =='/landing'">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/home']">
             <i class="ni ni-ui-04 d-lg-none"></i>
             <span class="nav-link-inner--text">Logout</span>
           </a>
