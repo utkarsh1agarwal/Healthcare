@@ -189,13 +189,18 @@
           <!-- <img src="./assets/img/theme/promo-1.png" class="img-fluid floating"> -->
           <div class="rounded shadow-lg overflow-hidden transform-perspective-right">
             <ngb-carousel>
+              <ng-template ngbSlide>
+                <img class="img-fluid" src="assets/img/theme/r1.jpeg" alt="Second slide">
+              </ng-template>
                 <ng-template ngbSlide>
-                  <img class="img-fluid" src="assets/img/theme/origin.jpg" alt="First slide">
+                  <img class="img-fluid" src="assets/img/theme/r.jpg" alt="First slide">
+                </ng-template>   
+                <ng-template ngbSlide>
+                  <img class="img-fluid" src="assets/img/theme/r2.jpg" alt="First slide">
                 </ng-template>
                 <ng-template ngbSlide>
-                  <img class="img-fluid" src="assets/img/theme/three.jpg" alt="Second slide">
-                </ng-template>
-                
+                  <img class="img-fluid" src="assets/img/theme/r3.jpg" alt="First slide">
+                </ng-template>              
             </ngb-carousel>
           </div>
         </div>
