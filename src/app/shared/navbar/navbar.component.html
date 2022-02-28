@@ -47,22 +47,22 @@
             <span class="nav-link-inner--text">Home</span>
           </a>
         </li>
-        <li class="nav-item dropdown" *ngIf="getPath() =='/login'">
+        <li class="nav-item dropdown" *ngIf="getPath() =='/login' || getPath() =='/home'">
           <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/register']">
             <i class="ni ni-ui-04 d-lg-none"></i>
             <span class="nav-link-inner--text">Register</span>
           </a>
         </li>
-        <li class="nav-item dropdown" *ngIf="getPath() =='/register'">
+        <li class="nav-item dropdown" *ngIf="getPath() =='/register' || getPath() =='/home'">
           <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/login']">
             <i class="ni ni-ui-04 d-lg-none"></i>
             <span class="nav-link-inner--text">Login</span>
           </a>
         </li>
-        <li class="nav-item dropdown" *ngIf="getPath() =='/register'">
-          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/home']">
+        <li class="nav-item dropdown">
+          <a class="nav-link no-caret" data-toggle="dropdown" role="button" style="cursor: pointer;" [routerLink]="['/claims']">
             <i class="ni ni-ui-04 d-lg-none"></i>
-            <span class="nav-link-inner--text">Home</span>
+            <span class="nav-link-inner--text">Business Operations</span>
           </a>
         </li>
         <li class="nav-item dropdown" *ngIf="getPath() =='/user-profile'">
